@@ -30,10 +30,16 @@ public class AudioControler : MonoBehaviour
         }
     }
 
-    public void ChangeButtons(float linear) => _mixer.SetFloat(_buttonsParameter.name, LinearToDb(linear));
+    public void ChangeButtons(float linear)
+    {
+        _mixer.SetFloat(_buttonsParameter.name, LinearToDb(linear));
+    }
 
-    public void ChangeMusic(float linear) => _mixer.SetFloat(_musicParameter.name, LinearToDb(linear));
-
+    public void ChangeMusic(float linear)
+    {
+        _mixer.SetFloat(_musicParameter.name, LinearToDb(linear));
+    }
+    
     private static float LinearToDb(float value)
     {
         float threshold = 0.0001f;

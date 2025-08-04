@@ -57,12 +57,6 @@ public class AudioBinder : MonoBehaviour
             OnMasterToggled(_masterToggle.isOn);
     }
 
-    private void OnMasterChanged(float value) => _panelAudio.ChangeMaster(value);
-   
-    private void OnButtonsChanged(float value) => _panelAudio.ChangeButtons(value);
-  
-    private void OnMusicChanged(float value) => _panelAudio.ChangeMusic(value);
-
     private void OnMasterToggled(bool enabled)
     {
         _masterSlider.enabled = enabled;
@@ -71,4 +65,11 @@ public class AudioBinder : MonoBehaviour
 
         _panelAudio.ToggleMaster(enabled);
     }
+    
+    private void OnMasterChanged(float value) => _panelAudio.ChangeMaster(value);
+   
+    private void OnButtonsChanged(float value) => _panelAudio.ChangeButtons(value);
+  
+    private void OnMusicChanged(float value) => _panelAudio.ChangeMusic(value);
+
 }
